@@ -40,6 +40,8 @@ We will iterate through the string and push the opening brackets onto the stack.
 If we encounter a closing bracket, we will pop the stack.
 The idea is that whenever we encounter a closing bracket, the matching opeerning bracket should be on the top of the stack.
 At the end of iteration, if the stack is empty, the string is valid.
+Time complexity is O(n) since we iterate through the string once.
+Space complexity is O(n) since we use a stack.
 */
 var isValid = function (s) {
     let stack = [];
