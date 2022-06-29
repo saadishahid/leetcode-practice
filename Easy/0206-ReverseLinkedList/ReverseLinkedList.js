@@ -54,3 +54,33 @@ var reverseList = function (head) {
     return prevPointer;
 
 };
+
+
+/*
+- we will use a helper function to reverse the list.
+-helper function will take in the current node and the previous node.
+- we will write a recursive function to reverse the list.
+- we will set base case to when the current node is null. We will return the previous node.
+- we will store the next node in a temporary variable.
+- we will set the next node to the previous node.
+- we will set the current node to the temp.
+- we will make the recursive call with curr and prev as params.
+
+
+
+*/
+var reverseListRecursive = function(head) {
+    return reverse(head, null);
+    
+};
+
+function reverse(curr,prev) {
+    if (!curr) {
+        return prev;
+    }
+    let temp = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = temp;
+    return reverse(curr,prev);
+}
