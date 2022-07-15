@@ -22,7 +22,10 @@ Constraints:
 
 /*
 Approach:
-
+- First we will create a base case for the recursion. This is when the root is null.
+- We will recurse on the left and right nodes.
+- We will set the max of the left and right nodes.
+- We will add 1 to the max to account for the root (or the recursive call).
 */
 var maxDepth = function (root) {
 
